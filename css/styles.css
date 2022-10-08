@@ -11,6 +11,7 @@
   --product-text-color: #212121;
   --mail-color: rgba(255, 255, 255, 0.6);
   --less-white-for-bg: #f5f4fa;
+  --back-color-but: #f5f5f5;
 }
 
 body {
@@ -31,6 +32,9 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+a {
+  text-decoration: none;
 }
 img {
   display: block;
@@ -203,7 +207,7 @@ header > .container {
 }
 .page-portfolio_main-text_button {
   border: none;
-  background: var(--white-text-color);
+  background: var(--back-color-but);
   color: var(--product-text-color);
   border-color: var(--white-text-color);
   font-weight: 500;
@@ -253,7 +257,11 @@ header > .container {
 .item-portfolio:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  cursor: pointer;
+}
+.item-portfolio > a {
+  display: block;
+  color: inherit;
+  list-style: none;
 }
 .text-portfolio {
   padding: 20px 24px;
@@ -417,7 +425,7 @@ header > .container {
   margin-right: 30px;
 }
 .client-icon-item {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 170px;
