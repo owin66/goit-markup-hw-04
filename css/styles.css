@@ -3,6 +3,7 @@
   --background-color: #2f303a;
   --background-text-color: #757575;
   --color-nav: #000000;
+  --color-icon: #ffffff;
   --off-text-decoration: none;
   --off-list-style-type: none;
   --white-text-color: #ffffff;
@@ -128,7 +129,16 @@ header > .container {
 .item-info > a {
   padding-top: 32px;
   padding-bottom: 32px;
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row-reverse;
+}
+.icon-mail {
+  width: 16px;
+  height: 16px;
+  content: '';
+  fill: currentColor;
 }
 .main-info .item-info:not(:last-child) {
   margin-right: 50px;
@@ -146,8 +156,17 @@ header > .container {
   text-decoration: var(--off-text-decoration);
   color: var(--brand-color);
 }
+
 .section.main-section {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   background: var(--background-color);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/backgoundImg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -289,6 +308,15 @@ header > .container {
   text-transform: uppercase;
   color: #212121;
 }
+.icon-description {
+  display: inline-flex;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--less-white-for-bg);
+}
 .item-properties {
   min-width: 270px;
 }
@@ -311,7 +339,7 @@ header > .container {
 .team ul {
   list-style-type: var(--off-list-style-type);
 }
-.team li {
+.team-desc {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -341,6 +369,32 @@ header > .container {
 }
 .team-list .item-team:not(:last-child) {
   margin-right: 30px;
+}
+.team-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  gap: 10px;
+}
+.team-icon-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+}
+.team-icon-link:hover,
+.team-icon-link:focus {
+  background-color: var(--brand-color);
+  color: var(--color-icon);
+}
+.team-icon-link {
+  color: rgba(175, 177, 184, 1);
+}
+.icon-network {
+  fill: currentColor;
 }
 .page-footer ul {
   list-style-type: var(--off-list-style-type);
